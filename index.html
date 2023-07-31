@@ -14,7 +14,36 @@
   </head>
   <body>
     <div class="container">
-      <h1>Hello World</h1>
+      <h1>Weather App</h1>
+      <form>
+        <div class="row">
+          <div class="col-9">
+            <input
+              type="search"
+              placeholder="Enter a city..."
+              class="form-control search-input"
+              id="search-input"
+            />
+          </div>
+          <div class="col-3 p-0">
+            <input
+              type="submit"
+              class="btn btn-primary w-100"
+              value="Search"
+              id="search-button"
+            />
+          </div>
+        </div>
+      </form>
+      <div class="forecast">
+        <div class="row align-items-start">
+          <div class="col 2.4">Mon</div>
+          <div class="col 2.4">Tue</div>
+          <div class="col 2.4">Wed</div>
+          <div class="col 2.4">Thu</div>
+          <div class="col 2.4">Fri</div>
+        </div>
+      </div>
     </div>
     <script src="src/app.js"></script>
   </body>
