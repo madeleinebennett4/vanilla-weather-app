@@ -13,7 +13,7 @@
     <title>Weather App</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="main-container">
       <h1>Weather App</h1>
       <form>
         <div class="row">
@@ -35,8 +35,28 @@
           </div>
         </div>
       </form>
-      <div class="forecast">
-        <div class="row align-items-start">
+      <div class="container">
+        <div class="row">
+          <div class="col 6">
+            <h2>London</h2>
+            <h3 class="current-date">Tuesday 15:00</h3>
+            <h4 class="current-temperature">
+              24 <span class="celcius">°C |</span>
+              <span class="farenheit">°F</span>
+            </h4>
+          </div>
+          <div class="col 6">
+            <ul class="weather-today-details">
+              <li class="precipitation">Precipitation:</li>
+              <li class="humidity">Humidity:</li>
+              <li class="wind">Wind:</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="container">
+        <div class="row" id="forecast">
           <div class="col 2.4">Mon</div>
           <div class="col 2.4">Tue</div>
           <div class="col 2.4">Wed</div>
