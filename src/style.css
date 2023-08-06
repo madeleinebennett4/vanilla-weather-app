@@ -55,7 +55,7 @@ ul {
 
 #details {
   position: relative;
-  top: -15px;
+  top: -10px;
   color: #5e63b6;
   list-style: none;
   padding-top: 100px;
@@ -85,4 +85,9 @@ ul .cloudiness {
   position: relative;
   top: -16px;
   text-transform: capitalize;
+}
+
+.units {
+  position: relative;
+  top: -12px;
 }
