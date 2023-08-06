@@ -55,11 +55,11 @@ ul {
 
 #details {
   position: relative;
-  top: 2px;
+  top: -15px;
   color: #5e63b6;
   list-style: none;
   padding-top: 100px;
-  line-height: 30px;
+  line-height: 28px;
 }
 .link {
   color: #5e63b6;
@@ -75,7 +75,7 @@ ul {
 .current-temp {
   position: relative;
   font-size: 64px;
-  top: 34px;
+  top: 20px;
 }
 .current-date {
   font-size: 18px;
@@ -83,5 +83,6 @@ ul {
 
 ul .cloudiness {
   position: relative;
-  top: -20px;
+  top: -16px;
+  text-transform: capitalize;
 }

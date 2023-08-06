@@ -1,11 +1,15 @@
 function displayTemperature(response) {
   console.log(response.data);
   let temperatureElement = document.querySelector(".current-temp");
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  let cityElement = document.querySelector("#city");
   let humidityElement = document.querySelector(".humidity");
-  humidityElement.innerHTML = response.data.main.humidity;
   let detailsElement = document.querySelector(".cloudiness");
-  detailsElement.innerHTML.toUpperCase = response.data.weather[0].description;
+  let windElement = document.querySelector(".wind");
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  cityElement.innerHTML = response.data.name;
+  humidityElement.innerHTML = response.data.main.humidity;
+  detailsElement.innerHTML = response.data.weather[0].description;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 
 let apiKey = "4cd9acb8c28909bac787b5e975b439ef";
