@@ -55,12 +55,15 @@ ul {
 
 #details {
   position: relative;
-  top: -10px;
+  left: 70px;
+  top: -5px;
   color: #5e63b6;
   list-style: none;
-  padding-top: 100px;
+  padding-top: 150px;
+
   line-height: 28px;
 }
+
 .link {
   color: #5e63b6;
 }
@@ -72,9 +75,15 @@ ul {
   padding-bottom: 30px;
 }
 
+#icon {
+  position: relative;
+  left: -15px;
+}
+
 .current-temp {
   position: relative;
   font-size: 64px;
+  left: -20px;
   top: 20px;
 }
 .current-date {
@@ -90,4 +99,5 @@ ul .cloudiness {
 .units {
   position: relative;
   top: -12px;
+  left: -18px;
 }
