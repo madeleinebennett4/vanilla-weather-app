@@ -64,8 +64,10 @@ ul {
   line-height: 28px;
 }
 
-.link {
+small {
   color: #5e63b6;
+  position: relative;
+  bottom: -20px;
 }
 #forecast {
   color: #5e63b6;
