@@ -21,7 +21,7 @@ small {
   font-family: "DM Sans", sans-serif;
   background: #fff;
   max-width: 800px;
-  max-height: 600px;
+  max-height: 700px;
   padding: 40px 30px;
   border-radius: 16px;
   color: #878787;
@@ -60,7 +60,6 @@ ul {
   color: #5e63b6;
   list-style: none;
   padding-top: 150px;
-
   line-height: 28px;
 }
 
@@ -69,12 +68,10 @@ small {
   position: relative;
   bottom: -20px;
 }
-#forecast {
+#weather-forecast {
   color: #5e63b6;
-  position: relative;
-  top: -50px;
-  padding-left: 30px;
-  padding-bottom: 30px;
+  text-align: center;
+  line-height: 18px;
 }
 
 #icon {
@@ -112,4 +109,19 @@ ul .cloudiness {
 
 #weather-description .active:hover {
   text-decoration: none;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.7;
+}
+.weather-forecast-temperatures {
+  font-size: 13px;
+}
+.weather-forecast-temperature-minimum {
+  opacity: 0.7;
+}
+
+.weather-forecast-temperature-maximum {
+  color: #3b42b8;
 }
