@@ -31,7 +31,7 @@ small {
   font-family: "DM Sans", sans-serif;
   background: white;
   max-width: 600px;
-  max-height: 700px;
+  max-height: 800px;
   padding: 30px 30px;
   border-radius: 16px;
   color: #878787;
@@ -123,7 +123,7 @@ small {
   font-size: 16px;
   opacity: 0.7;
 }
-.weather-forecast-temperatures {
+.weather-forecast-temps {
   font-size: 13px;
 }
 .weather-forecast-temperature-minimum {
