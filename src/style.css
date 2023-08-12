@@ -23,7 +23,11 @@ small {
   left: 10px;
   bottom: -20px;
 }
-.container {
+
+#main-container {
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  margin: 0 auto;
+  display: block;
   font-family: "DM Sans", sans-serif;
   background: white;
   max-width: 600px;
@@ -32,15 +36,14 @@ small {
   border-radius: 16px;
   color: #878787;
 }
+.container {
+  padding: 30px 30px;
+}
 #city {
   font-size: 28px;
   line-height: 30px;
 }
-#main-container {
-  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
-  margin: 0 auto;
-  display: block;
-}
+
 #search-button {
   background-color: #a7bfdc;
   border-color: #8295ab;
@@ -63,6 +66,10 @@ small {
 .weather-forecast {
   color: #5e63b6;
   line-height: 18px;
+  position: relative;
+  left: 40px;
+  top: 20px;
+  text-align: center;
 }
 
 #icon {

@@ -20,32 +20,35 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes} `;
 }
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
-      `<div class="row">
-      <div class="col 2.4">
-              <div class="weather-forecast-date">${day}</div>
-              <img
-                src="https://openweathermap.org/img/wn/03d@2x.png"
-                alt=""
-                width="40"
-              />
-              <div>
-                <span class="weather=forecast-temperature-maximum">18° </span>
-                <span class="weather-forecast-temperature-minimum">12°</span>
-              </div>
-            </div>
-          </div>
-        </div>`;
+      `
+      <div class="col-2 ">
+        <div class="weather-forecast-date">${day}</div>
+        <img src="https://openweathermap.org/img/wn/03d@2x.png" alt="" width="40" />
+        <div>
+          <span class="weather=forecast-temperature-maximum">18° </span>
+          <span class="weather-forecast-temperature-minimum">12°</span>
+        </div>
+      </div>
+        `;
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "6e6ec494746b5229a9f2d526478c924c";
+  let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}£units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayTemperature(response) {
   let temperatureElement = document.querySelector(".current-temp");
   let cityElement = document.querySelector("#city");
@@ -67,10 +70,12 @@ function displayTemperature(response) {
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
+  getForecast(response.data.coord);
 }
 
 function search(city) {
-  let apiKey = "4cd9acb8c28909bac787b5e975b439ef";
+  let apiKey = "6e6ec494746b5229a9f2d526478c924c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
 }
@@ -105,4 +110,3 @@ let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", showCelciusTemp);
 
 search("London");
-displayForecast();
